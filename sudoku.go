@@ -33,7 +33,7 @@ func (sudoku *Sudoku) Solve() error {
 					}
 				}
 			}
-			return fmt.Errorf("dead end")
+			return fmt.Errorf("unsolvable")
 		}
 	}
 
