@@ -2,8 +2,12 @@ package sudoku
 
 import "fmt"
 
-type Sudoku struct{}
-
-func Solve(input *Sudoku) (*Sudoku, error) {
-	return nil, fmt.Errorf("not implemented!")
+// -1 represents an empty field
+type Sudoku struct {
+	Fields [9][9]int
 }
+
+func (sudoku *Sudoku) Solve() (error) {
+	return fmt.Errorf("not implemented!")
+}
+
