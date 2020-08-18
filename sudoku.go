@@ -10,7 +10,7 @@ type Sudoku struct {
 func (sudoku *Sudoku) Print() {
 	for y := 0; y < 9; y++ {
 		for x := 0; x < 9; x++ {
-			fmt.Printf(" %d ", sudoku.Fields[x][y])
+			fmt.Printf(" %d ", sudoku.Fields[y][x])
 		}
 		fmt.Printf("\n")
 	}
