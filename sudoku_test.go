@@ -25,6 +25,27 @@ func TestSudoku1(t *testing.T) {
 	}
 }
 
+func TestSudoku2(t *testing.T) {
+	sudoku := Sudoku {
+		Fields: [9][9]int{
+			{ 1, 2, 3, 0, 0, 0, 0, 0, 0 },
+			{ 4, 5, 6, 0, 0, 0, 0, 0, 0 },
+			{ 7, 8, 9, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 1, 2, 3 },
+			{ 0, 0, 0, 0, 0, 0, 4, 5, 6 },
+			{ 0, 0, 0, 0, 0, 0, 7, 8, 9 },
+		},
+	}
+
+	if err := sudoku.Solve(); err != nil {
+		sudoku.Print()
+		t.Fatalf("Could not Solve Suduko, got error: %v", err)
+	}
+}
+
 func TestUnsolvableSudoku(t *testing.T) {
 	sudoku := Sudoku {
 		Fields: [9][9]int{
